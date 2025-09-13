@@ -1,37 +1,116 @@
-> **Noms et prénoms des auteurs du projet**
-> 
-> POINT Yvon 
-> GAREA Jeannette 
-> MOHAMED AMINE Jilani 
-> 
-> 
-> 
-> **Par rapport au projet**
-> 
-> On est chargé de concevoir un système de gestion pour une bibliothèque municipale qui souhaite informatiser ses activités : catalogage, consultations, gestion des utilisateurs, prêts, etc.
-> 
-> La bibliothèque offre un accès à un large choix de ressources de différents types (livres, films, et enregistrement musicaux). Une ressource, quelque soit son type, a un code unique, un titre, une liste de contributeurs, une date d'apparition, un éditeur, un genre et un code de classification qui permet de la localiser dans la bibliothèque. Un contributeur est caractérisé par son nom, son prénom, sa date de naissance et sa nationalité. Dans le cas d'un livre, les contributeurs sont les auteurs du document. Dans le cas d'une œuvre musicale, on distinguera compositeurs et interprètes. De même, on distinguera les réalisateurs et les acteurs pour les films. On souhaite également conserver des informations spécifiques suivant le type du document, par exemple : l'ISBN d'un livre et son résumé, la langue des documents écrits et des films, la longueur d'un film ou d'une œuvre musicale, le synopsis d'un film, etc. Enfin, les ressources dont dispose la bibliothèque peuvent être disponibles en plusieurs exemplaires, chacun dans un état différent : neuf, bon, abîmé ou perdu.
-> 
-> Chaque membre du personnel de la bibliothèque dispose d'un compte utilisateur (login et mot de passe) qui lui permet d'accéder aux fonctions d'administration du système. Chaque membre est caractérisé par son nom, son prénom, son adresse et son adresse e-mail.
-> 
-> Les adhérents de la bibliothèque disposent, eux aussi, d'un compte utilisateur (login et mot de passe) ainsi que d'une carte d'adhérent qui leur permettent d'emprunter des documents. Un adhérent est caractérisé par son nom, prénom, date de naissance, adresse, adresse e-mail et numéro de téléphone. La bibliothèque souhaite garder trace de toutes les adhésions, actuelles et passées.
-> 
-> Pour pouvoir emprunter un document, un adhérent à besoin de s'authentifier. Chaque prêt est caractérisé par une date de prêt et une durée de prêt. Un document ne peut être emprunté que s'il est disponible et en bon état. Un adhèrent ne peut emprunter simultanément qu'un nombre limité d'œuvres, chacune pour une durée limitée. Un adhérent sera sanctionné pour les retards dans le retour d'un ouvrage, ainsi que s'il dégrade l'état de celui-ci. Tout retard dans la restitution des documents empruntés entraîne une suspension du droit de prêt d'une durée égale au nombre de jours de retard. En cas de perte ou détérioration grave d'un document, la suspension du droit de prêt est maintenue jusqu'à ce que l'adhérent rembourse le document. Enfin, la bibliothèque peut choisir de blacklister un adhérent en cas de sanctions répétées.
-> 
-> 
-> **Besoins**
-> 
-> - Faciliter aux adhérents la recherche de documents et la gestion de leurs emprunts.
-> 
-> - Faciliter la gestion des ressources documentaires : ajouter des documents, modifier leur description, ajouter des exemplaires d'un document, etc.
-> 
-> - Faciliter au personnel la gestion des prêts, des retards et des réservation.
-> 
-> - Faciliter la gestion des utilisateurs et de leurs données.
-> 
-> - Établir des statistiques sur les documents empruntés par les adhérents, cela permettra par exemple d'établir la liste des documents populaires, mais aussi d'étudier le profil des adhérents pour pouvoir leur suggérer des documents.
-> 
-> **Choix de l'architecture du projet**
-> 
-> Le choix de l'architecture d'un projet dépend des besoins fonctionnels, des contraintes techniques et des objectifs à long terme, visant à garantir évolutivité, performance et maintenabilité.
-> 
+# 📚 Projet de Système de Gestion de Bibliothèque Municipale  
+*(Library Management System Project)*  
+
+---
+
+## 👥 Auteurs / Authors  
+- POINT Yvon  
+- GAREA Jeannette  
+- MOHAMED AMINE Jilani  
+
+---
+
+## 📖 Description du projet (FR)  
+
+Nous sommes chargés de concevoir un système de gestion pour une **bibliothèque municipale** souhaitant informatiser ses activités :  
+- Catalogage  
+- Consultations  
+- Gestion des utilisateurs  
+- Prêts et retours  
+
+La bibliothèque propose un large choix de ressources : **livres, films et enregistrements musicaux**.  
+
+Chaque ressource, quel que soit son type, est caractérisée par :  
+- Un code unique  
+- Un titre  
+- Une liste de contributeurs  
+- Une date d’apparition  
+- Un éditeur  
+- Un genre  
+- Un code de classification (pour la localisation dans la bibliothèque)  
+
+Des informations spécifiques s’ajoutent selon le type de ressource :  
+- **Livre** : ISBN, résumé, langue  
+- **Film** : réalisateurs, acteurs, durée, langue, synopsis  
+- **Œuvre musicale** : compositeurs, interprètes, durée  
+
+Chaque ressource peut exister en plusieurs exemplaires, avec un état : *neuf, bon, abîmé ou perdu*.  
+
+### Gestion des utilisateurs  
+- **Personnel** : compte utilisateur (login/mot de passe), accès aux fonctions d’administration.  
+- **Adhérents** : compte utilisateur + carte d’adhérent, permettant l’emprunt. Caractéristiques : nom, prénom, date de naissance, adresse, email, téléphone.  
+
+### Gestion des prêts  
+- Un emprunt est lié à une **date** et une **durée**.  
+- Un document doit être disponible et en bon état.  
+- Limitation du nombre d’emprunts simultanés.  
+- **Sanctions** : retards, détérioration ou perte. Retards → suspension proportionnelle au retard. Perte → suspension jusqu’au remboursement.  
+- Possibilité de **blacklister** un adhérent en cas d’abus répétés.  
+
+### Besoins fonctionnels  
+- Recherche de documents et gestion des emprunts pour les adhérents.  
+- Gestion des ressources documentaires (ajout, modification, exemplaires).  
+- Gestion des prêts, retards et réservations pour le personnel.  
+- Gestion des utilisateurs et de leurs données.  
+- Génération de **statistiques** : documents populaires, profils d’adhérents, recommandations.  
+
+### Choix d’architecture  
+L’architecture du projet est guidée par :  
+- Les besoins fonctionnels  
+- Les contraintes techniques  
+- Les objectifs de long terme : **évolutivité, performance, maintenabilité**  
+
+---
+
+## 📖 Project Description (EN)  
+
+We are tasked with designing a **management system** for a municipal library that wants to digitize its activities:  
+- Cataloging  
+- Consultations  
+- User management  
+- Loans and returns  
+
+The library offers a wide range of resources: **books, movies, and music recordings**.  
+
+Each resource, regardless of its type, has:  
+- A unique code  
+- A title  
+- A list of contributors  
+- A publication/release date  
+- A publisher  
+- A genre  
+- A classification code (to locate it within the library)  
+
+Additional information is required depending on the resource type:  
+- **Book**: ISBN, summary, language  
+- **Film**: directors, actors, duration, language, synopsis  
+- **Musical work**: composers, performers, duration  
+
+Resources can exist in multiple copies, each with a state: *new, good, damaged, or lost*.  
+
+### User Management  
+- **Staff**: user account (login/password), access to administration features.  
+- **Members**: user account + membership card, allowing borrowing. Characteristics: name, surname, date of birth, address, email, phone number.  
+
+### Loan Management  
+- A loan has a **date** and a **duration**.  
+- A document must be available and in good condition.  
+- Maximum number of simultaneous loans is limited.  
+- **Penalties**: late returns, deterioration, or loss. Late → suspension equal to the number of delayed days. Loss → suspension until reimbursement.  
+- The library can **blacklist** a member in case of repeated sanctions.  
+
+### Functional Requirements  
+- Make it easier for members to search for documents and manage their loans.  
+- Simplify library resource management (add/edit documents, add copies).  
+- Help staff manage loans, late returns, and reservations.  
+- Manage users and their data.  
+- Provide **statistics**: popular documents, user profiles, personalized recommendations.  
+
+### Architecture Choice  
+The project’s architecture depends on:  
+- Functional requirements  
+- Technical constraints  
+- Long-term objectives: **scalability, performance, maintainability**  
+
+---
+
